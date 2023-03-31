@@ -9,9 +9,9 @@ public class Square {
 		// take number from user
 		Scanner s = new Scanner(System.in); // scan from keyboard 
 		System.out.print("Enter number :");
-		int num = s.nextInt();  // read int from keyboard
+		var num = s.nextInt();  // read int from keyboard
 
-		int square = num * num;
+		var square = num * num;
 		System.out.println(square);
 
 	}

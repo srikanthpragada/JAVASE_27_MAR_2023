@@ -3,7 +3,12 @@ package basics;
 public class DataTypes {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		 var a = 10; 
+		 double b =  10.50;
+		 
+		 System.out.println(a + b);
+		 
+		 
 
 	}
 
