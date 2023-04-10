@@ -10,6 +10,9 @@ public class TestAccount {
 		System.out.println(a.getBalance());
 		System.out.println(a.getAcno());
 		a.print();
+		
+		Account a2 = new Account(1, "Jason", 50000);
+		 
 
 	}
 

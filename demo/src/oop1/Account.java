@@ -9,11 +9,19 @@ public class Account {
     	acno = no;
     	ahname = name;
     }
+    
+    public Account(int no, String name, double bal) {
+    	acno = no;
+    	ahname = name;
+    	balance = bal;
+    }
+    
     // Methods 
     public void print() {
     	System.out.println(acno);
     	System.out.println(ahname);
     	System.out.println(balance);
+    	 
     }
     
     public void deposit(double amount) {
