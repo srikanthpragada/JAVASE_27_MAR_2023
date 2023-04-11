@@ -1,32 +1,45 @@
 package oop1;
 
 public class Product {
-	// instance variables 
+	// instance variables
 	private String name;
 	private int price, qoh;
+	// class variable 
+	private static int taxrate = 12;
 
-	// Constructor
-	public Product(String n, int p) {
-		name = n;
-		price = p;
+	
+	public Product(String name, int price) {
+		this.name = name;
+		this.price = price;
 	}
-    // Method
+
+	public Product(String name, int price, int qoh) {
+		this(name, price); // call constructor
+		this.qoh = qoh;
+	}
+	
+	// invoked with classname 
+	public static int getTaxrate() {
+		return taxrate;
+	}
+
+	// Method
 	public void print() {
-		System.out.println(name);
-		System.out.println(price);
-		System.out.println(qoh);
+		System.out.println(this.name);
+		System.out.println(this.price);
+		System.out.println(this.qoh);
 	}
-	
+
 	public int getNetPrice() {
-		 return price + (price * 12 / 100);  // tax @ 12%
+		return this.price + (this.price * taxrate / 100); // tax @ 12%
 	}
-	
+
 	public void buy(int qty) {
-		 qoh += qty;
+		this.qoh += qty;
 	}
 
 	public void sell(int qty) {
-		 qoh -= qty;
+		this.qoh -= qty;
 	}
 
 }
