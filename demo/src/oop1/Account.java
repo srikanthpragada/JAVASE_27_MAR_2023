@@ -4,35 +4,41 @@ public class Account {
     private int acno;
     private String ahname;
     private double balance;
+    private static int minbal = 5000;
+    
+    public static int getMinbal() {
+    	return minbal;
+    }
     // constructor 
-    public Account(int no, String name) {
-    	acno = no;
-    	ahname = name;
+    public Account(int acno, String ahname) {
+    	this.acno = acno;
+    	this.ahname = ahname;
     }
     
-    public Account(int no, String name, double bal) {
-    	acno = no;
-    	ahname = name;
-    	balance = bal;
+    public Account(int acno, String ahname, double balance) {
+    	this(acno,ahname);
+    	this.balance = balance;
     }
     
     // Methods 
     public void print() {
-    	System.out.println(acno);
-    	System.out.println(ahname);
-    	System.out.println(balance);
+    	System.out.println(this.acno);
+    	System.out.println(this.ahname);
+    	System.out.println(this.balance);
     }
     
     public void deposit(double amount) {
-    	balance += amount;
+    	this.balance += amount;
     }
     public void withdraw(double amount) {
-    	balance -= amount;
+    	if(this.balance - Account.minbal >= amount)
+    		balance -= amount;
     }
+    
     public double getBalance() {
-    	return balance; 
+    	return this.balance; 
     }
     public double getAcno() {
-    	return acno; 
+    	return this.acno; 
     }
 }
