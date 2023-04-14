@@ -31,20 +31,11 @@ public class TestCourse {
 
 	public static void main(String[] args) {
 		 Course c = new Course("Java SE", 10000);
-		 // upcasting 
-		 // c = new OnlineCourse("Python", 10000, "http://xyz");
+		 System.out.println(c.getFee()); // Runtime Polymorphism
 		 
-		 // Downcasting
-		 if(c instanceof OnlineCourse) {
-		     OnlineCourse oc = (OnlineCourse) c;
-		 }
-		  
-		 // Pattern matching - check and downcast 
-		 if(c instanceof OnlineCourse online) {
-		      System.out.println(online.getFee());
-		 }
-		 
-		 
+		 c = new OnlineCourse("Python", 10000, "http://xyz");
+		 System.out.println(c.getFee()); // Runtime Polymorphism
+	 
 	}
 
 }
