@@ -7,6 +7,9 @@ class Course {
 		this.title = title;
 		this.fee = fee;
 	}
+	public final String getTitle() {
+		return this.title;
+	}
 	public int getFee() {
 		return this.fee;
 	}
