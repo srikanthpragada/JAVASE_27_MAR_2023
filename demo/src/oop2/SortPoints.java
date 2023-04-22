@@ -2,7 +2,7 @@ package oop2;
 
 import java.util.Arrays;
 
-class Point {
+class Point implements Comparable<Point> {
 	private int x, y;
 	public Point(int x, int y) {
 		this.x = x;
@@ -11,6 +11,16 @@ class Point {
 	@Override
 	public String toString() {
 		return x + "," + y;
+	}
+	@Override
+	public int compareTo(Point other) {
+		 if (this.y > other.y)
+			 return 1;
+		 else
+			 if (this.y < other.y)
+				 return -1;
+			 else
+				 return this.x - other.x;
 	}
 }
 
