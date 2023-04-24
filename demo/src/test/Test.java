@@ -11,7 +11,7 @@ public class Test {
 		java.sql.Date d2; // fully qualified classname
 
 		Order ord;
-		
+	 
 		 
 
 	}
