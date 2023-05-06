@@ -9,7 +9,7 @@ import java.util.Collections;
 public class SortNamesFromFile {
 
 	public static void main(String[] args) throws IOException {
-		try (FileReader fr = new FileReader("c:\\classroom\\oct8\\names.txt")) {
+		try (FileReader fr = new FileReader("d:\\classroom\\mar27j\\names.txt")) {
 			var br  = new BufferedReader(fr);
 			var names = new ArrayList<String>();
 						
@@ -22,10 +22,10 @@ public class SortNamesFromFile {
 			}
 			br.close();
 			
-			Collections.sort(names);
+			Collections.sort(names); // names.sort(null);
 			
 			for(String name : names)
-				System.out.println(name.toUpperCase());
+				System.out.println(name);
 
 		}
 	}
