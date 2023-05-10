@@ -15,17 +15,13 @@ public class ArrayToStream {
 	public static void main(String[] args) {
 		String[] names = { "TypeScript","Visual Basic","Java", 
 				           "JavaScript", "Php", "Python","C#" };
+		
+		Arrays.stream(names)  // convert array to stream 
+		      .filter(n ->  n.length() > 5)  // Predicate : boolean test(Object)
+		      .sorted()
+		      .forEach(System.out::println); // Consumer : void accept(Object)
+		      
 
-		// Arrays.stream(names).forEach(new PrintName());
-		
-//		Arrays.stream(names)
-//		      .forEach( v -> System.out.println(v.toUpperCase()));
-		
-		Arrays.stream(names)
-		  .filter(v -> v.length() > 3)     // intermediate op
-		  .sorted()                        // intermediate op 
-		  .limit(3)                        // intermediate op 
-	      .forEach(System.out::println);   // terminal op
-	}
+	} 
 
 }
